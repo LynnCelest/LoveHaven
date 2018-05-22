@@ -2,14 +2,15 @@ import React from 'react';
 import { StyleSheet, Text, View, TextInput, ScrollView, Button } from 'react-native';
 import { StackNavigator, TabNavigator, TabBarBottom, DrawerNavigator, SafeAreaView } from 'react-navigation';
 import * as firebase from 'firebase';
+const Secret = require('./secret.js');
 
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: process.env.apiKey,
-  authDomain: process.env.authDomain,
-  databaseURL: process.env.databaseURL,
-  storageBucket: process.env.storageBucket
-};
+  apiKey: Secret.apiKey,
+  authDomain: Secret.authDomain,
+  databaseURL: Secret.databaseURL,
+  storageBucket: Secret.storageBucket
+}; //I'll expose the secret for the database when I learn more about it
 
 firebase.initializeApp(firebaseConfig);
 
