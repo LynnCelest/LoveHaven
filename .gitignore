@@ -1,0 +1,5 @@
+node_modules/**/*
+.expo/*
+npm-debug.*
+google-services.json
+secret.js
